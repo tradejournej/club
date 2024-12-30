@@ -1,0 +1,252 @@
+/* Общие стили для сброса */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Tenor Sans", serif;
+    color: #fff;
+    background-color: #121212;
+    background-image: url('фон1.avif'); /* Путь к изображению */
+    background-size: cover; /* Покрывает весь экран */
+    background-position: center center; /* Центрируем изображение */
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+h1, h2 {
+    font-weight: 600;
+    text-align: center;
+    color: #f79c42;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #212121, #000000);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar nav ul li {
+    margin: 0 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #f79c42;
+}
+
+ul, ol {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.review {
+    background-color: #2a2a2a;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.review p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.review strong {
+    font-weight: 600;
+    color: #f79c42;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reviews-container .review {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+#intro {
+    padding: 60px 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: transparent; /* Убираем темный фон */
+}
+  
+#intro h2 {
+    font-size: 2.8rem;
+    color: #f79c42;
+    margin-bottom: 20px;
+}
+  
+#intro p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Анимация для появления */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Стандартное состояние для элементов с анимацией */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* Элемент будет сдвигаться вниз */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Когда элемент становится видимым */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Общие стили для слайдера */
+.image-slider-container {
+    overflow: hidden; /* Скрыть излишки слайдов */
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+  
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease; /* Плавный переход при прокрутке */
+}
+  
+.image-slider .slide {
+    flex: 0 0 33.333%; /* Каждое изображение занимает 1/3 ширины контейнера */
+    box-sizing: border-box;
+    padding: 10px;
+}
+  
+.image-slider .slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Для блоков с анимацией слайдера */
+.image-slider-container .image-slider {
+    display: flex;
+}
+
+/* Стили для секции "Как начать?" */
+#start {
+    padding: 50px 20px;
+}
+
+#start .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Центрируем весь текст и кнопку */
+}
+
+/* Стили для обычного текста */
+#start p {
+    text-align: left; /* Выравнивание обычного текста по ширине */
+    max-width: 800px; /* Ограничиваем ширину текста */
+    margin: 0 auto 20px; /* Выравниваем текст по центру и отступ снизу */
+}
+
+/* Стили для кнопки */
+.btn-start {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff8623; /* Новый цвет фона кнопки */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.btn-start:hover {
+    background-color: #e6882e; /* Цвет кнопки при наведении (темнее) */
+}
