@@ -11,7 +11,7 @@ body {
     font-family: "Tenor Sans", serif;
     color: #fff;
     background-color: #121212;
-    background-image: url('фон1.avif'); /* Путь к изображению */
+    background-image: url('./фон1.avif'); /* Путь к изображению */
     background-size: cover; /* Покрывает весь экран */
     background-position: center center; /* Центрируем изображение */
     line-height: 1.8;
